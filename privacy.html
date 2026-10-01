@@ -6,22 +6,28 @@
   <meta name="description" content="Privacy policy for the Bitfight mobile app.">
   <title>Privacy | Bitfight</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="shortcut icon" type="image/x-icon" href="assets/favicon_io/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="assets/favicon_io/favicon.ico">
+  <meta name="theme-color" content="#0e131d">
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="index.html" aria-label="Bitfight home"><span class="brand-mark">B</span><span>BITFIGHT</span></a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
-    <nav id="site-nav" class="site-nav" aria-label="Main navigation">
-      <a href="index.html#about">The game</a><a href="index.html#news">News</a><a href="index.html#latest">Community</a><a href="index.html#modes">Modes</a>
-      <a class="nav-pill" href="https://apps.apple.com/tr/app/bitfight/id6449154006" target="_blank" rel="noopener noreferrer">Play</a>
-    </nav>
+  <header class="site-header solid">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Bitfight home"><img class="brand-mark" src="assets/favicon_io/apple-touch-icon.png" alt="" width="34" height="34"><span>BITFIGHT</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span></span><span></span></button>
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <a href="index.html#powers">Powers</a>
+        <a href="index.html#how">How to play</a>
+        <a href="index.html#community">Community</a>
+        <a class="btn btn-gold btn-sm" href="https://apps.apple.com/tr/app/bitfight/id6449154006" target="_blank" rel="noopener noreferrer">Play free</a>
+      </nav>
+    </div>
   </header>
 
   <main>
     <section class="legal">
-      <p class="legal-eyebrow">Effective 14/05/2023</p>
+      <p class="eyebrow">Legal</p>
       <h1>Privacy policy</h1>
+      <p class="legal-meta">Effective 14 May 2023</p>
 
       <div class="legal-body">
         <p>This Privacy Policy outlines the types of personal information we collect, use, and share when you use our mobile application, Bitfight (the "App"), and the steps we take to protect your privacy. By using our App, you agree to the collection and use of information in accordance with this policy.</p>
@@ -58,29 +64,25 @@
   </main>
 
   <footer class="site-footer">
-    <div class="footer-inner">
-      <div class="footer-row">
-        <div class="footer-social">
-          <span>Follow us on</span>
-          <a href="https://discord.gg/yCgdm2uQ" target="_blank" rel="noopener noreferrer">Discord</a>
-          <a href="https://www.reddit.com/r/bitfight/" target="_blank" rel="noopener noreferrer">Reddit</a>
-          <a href="https://app.gitter.im/#/room/#bitfight:gitter.im" target="_blank" rel="noopener noreferrer">Chat</a>
-        </div>
-        <a class="store-badge dark" href="https://apps.apple.com/tr/app/bitfight/id6449154006" target="_blank" rel="noopener noreferrer">
-          <span class="apple">&#63743;</span><span><small>Download on the</small>App Store</span>
-        </a>
-      </div>
-      <nav class="footer-links" aria-label="Legal">
-        <a href="privacy.html">Privacy Policy</a>
+    <div class="container footer-inner">
+      <a class="brand" href="index.html"><img class="brand-mark" src="assets/favicon_io/apple-touch-icon.png" alt="" width="34" height="34"><span>BITFIGHT</span></a>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="https://discord.gg/yCgdm2uQ" target="_blank" rel="noopener noreferrer">Discord</a>
+        <a href="https://www.reddit.com/r/bitfight/" target="_blank" rel="noopener noreferrer">Reddit</a>
+        <a href="https://app.gitter.im/#/room/#bitfight:gitter.im" target="_blank" rel="noopener noreferrer">Chat</a>
+        <a href="privacy.html">Privacy</a>
         <a href="mailto:yasinaktimur@gmail.com">Contact</a>
       </nav>
-      <div class="footer-end">
-        <span>&copy; 2026 Bitfight. Built for the next move.</span>
-        <a class="brand footer-brand" href="index.html"><span class="brand-mark">B</span><span>BITFIGHT</span></a>
-      </div>
+      <p class="copyright">© 2026 Bitfight. All rights reserved.</p>
     </div>
   </footer>
 
-  <script>const toggle=document.querySelector('.menu-toggle');const nav=document.querySelector('.site-nav');toggle.addEventListener('click',()=>{const open=toggle.getAttribute('aria-expanded')==='true';toggle.setAttribute('aria-expanded',String(!open));nav.classList.toggle('is-open',!open)});</script>
+  <script>
+    const toggle=document.querySelector('.menu-toggle');const nav=document.querySelector('.site-nav');
+    toggle.addEventListener('click',()=>{const open=toggle.getAttribute('aria-expanded')==='true';toggle.setAttribute('aria-expanded',String(!open));nav.classList.toggle('is-open',!open)});
+    nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{toggle.setAttribute('aria-expanded','false');nav.classList.remove('is-open')}));
+    const header=document.querySelector('.site-header');
+    const onScroll=()=>header.classList.toggle('is-scrolled',window.scrollY>10);onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+  </script>
 </body>
 </html>

@@ -3,135 +3,197 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Bitfight is a colorful competitive block puzzle for iPhone. Drop in, stack your colors and fight smart.">
-  <title>Bitfight | Drop in. Fight smart.</title>
+  <meta name="description" content="Bitfight is a colorful competitive block puzzle for iPhone. Four colors, four powers, one grid between you and your rival.">
+  <meta name="theme-color" content="#0e131d">
+  <meta property="og:title" content="Bitfight — Drop in. Fight smart.">
+  <meta property="og:description" content="A colorful competitive block puzzle for iPhone. Free to play.">
+  <meta property="og:image" content="assets/favicon_io/android-chrome-512x512.png">
+  <title>Bitfight — Drop in. Fight smart.</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="shortcut icon" type="image/x-icon" href="assets/favicon_io/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="assets/favicon_io/favicon.ico">
+  <link rel="apple-touch-icon" href="assets/favicon_io/apple-touch-icon.png">
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="#top" aria-label="Bitfight home"><span class="brand-mark">B</span><span>BITFIGHT</span></a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
-    <nav id="site-nav" class="site-nav" aria-label="Main navigation">
-      <a href="#about">The game</a><a href="#news">News</a><a href="#latest">Community</a><a href="#modes">Modes</a>
-      <a class="nav-pill" href="https://apps.apple.com/tr/app/bitfight/id6449154006" target="_blank" rel="noopener noreferrer">Play</a>
-    </nav>
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="Bitfight home"><img class="brand-mark" src="assets/favicon_io/apple-touch-icon.png" alt="" width="34" height="34"><span>BITFIGHT</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span></span><span></span></button>
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <a href="#powers">Powers</a>
+        <a href="#how">How to play</a>
+        <a href="#community">Community</a>
+        <a class="btn btn-gold btn-sm" href="https://apps.apple.com/tr/app/bitfight/id6449154006" target="_blank" rel="noopener noreferrer">Play free</a>
+      </nav>
+    </div>
   </header>
 
   <main id="top">
-    <!-- 1. hero art band -->
-    <section class="hero" aria-label="Bitfight">
-      <img class="hero-art" src="assets/bf.png" alt="">
-      <div class="hero-logo">
-        <span class="hero-mark">B</span>
-        <span class="hero-word">BITFIGHT</span>
-        <span class="hero-tag">Drop in. Fight smart.</span>
-      </div>
-    </section>
-
-    <!-- 2. image + text block -->
-    <section id="about" class="itb">
-      <div class="itb-inner">
-        <div class="itb-pic bleed-left"><img src="assets/bf.png" alt="Bitfight gameplay on iPhone"></div>
-        <div class="itb-text">
-          <h2>Stack your colors. Break their rhythm.</h2>
-          <p>Bitfight turns every falling block into a move that can change the match. Four colors, two fighters and one grid between you and the high score. Build a chain, trigger your power and send the pressure right back. Easy to learn, hard to leave. Download for free and drop in, fighter!</p>
-          <div class="badge-row">
-            <a class="store-badge" href="https://apps.apple.com/tr/app/bitfight/id6449154006" target="_blank" rel="noopener noreferrer">
-              <span class="apple">&#63743;</span><span><small>Download on the</small>App Store</span>
+    <!-- hero -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="dot"></span>Free on iPhone</p>
+          <h1>Drop in.<br><span class="gold">Fight smart.</span></h1>
+          <p class="lead">A competitive block puzzle where every color is a weapon. Stack, chain and blast your way past your rival — one falling block at a time.</p>
+          <div class="hero-actions">
+            <a class="app-store" href="https://apps.apple.com/tr/app/bitfight/id6449154006" target="_blank" rel="noopener noreferrer" aria-label="Download on the App Store">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>
+              <span><small>Download on the</small>App Store</span>
             </a>
+            <a class="btn btn-ghost" href="#how">How to play</a>
+          </div>
+          <ul class="hero-facts">
+            <li><strong>4</strong> colors</li>
+            <li><strong>1v1</strong> battles</li>
+            <li><strong>0</strong> cost to start</li>
+          </ul>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="glow"></div>
+          <span class="float-blk blk blk-red f1"></span>
+          <span class="float-blk blk blk-green f2"></span>
+          <span class="float-blk blk blk-blue f3"></span>
+          <span class="float-blk blk blk-yellow f4"></span>
+          <img class="phone" src="assets/bf.png" alt="" width="861" height="1732">
+        </div>
+      </div>
+    </section>
+
+    <!-- powers -->
+    <section id="powers" class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">The arsenal</p>
+          <h2>Four colors. Four powers.</h2>
+          <p class="section-lead">Every block you pop does something. Pick the right color at the right moment and the match is yours.</p>
+        </div>
+        <div class="power-grid">
+          <article class="power-card c-red">
+            <span class="blk blk-red"></span>
+            <h3>Attack</h3>
+            <p>Pop red blocks to hit your rival. Every red you clear takes that much off their health.</p>
+          </article>
+          <article class="power-card c-green">
+            <span class="blk blk-green"></span>
+            <h3>Heal</h3>
+            <p>Clear green to win back health and stay in the fight a little longer.</p>
+          </article>
+          <article class="power-card c-yellow">
+            <span class="blk blk-yellow"></span>
+            <h3>Boost</h3>
+            <p>Yellow grants a temporary edge — extra attack or extra defense when you need it most.</p>
+          </article>
+          <article class="power-card c-blue">
+            <span class="blk blk-blue"></span>
+            <h3>Disrupt</h3>
+            <p>Blast blue to rain a burst of random blocks onto your rival's board.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- how to play -->
+    <section id="how" class="section section-alt">
+      <div class="container how-grid">
+        <div class="how-copy">
+          <p class="eyebrow">How to play</p>
+          <h2>Easy to learn.<br>Hard to put down.</h2>
+          <p class="section-lead">Blocks fall from the top. Line up same-colored blocks, then drop a <strong>killer block</strong> on them: it destroys every connected block of its color and scores a point for each one.</p>
+          <div class="killer">
+            <div class="killer-demo" aria-hidden="true">
+              <span class="blk blk-green blk-sm"></span><span class="blk blk-green blk-sm"></span><span class="blk blk-green blk-sm"></span>
+              <span class="arrow">+</span>
+              <span class="blk blk-green blk-sm killer-blk"></span>
+            </div>
+            <p>The bigger the chain, the bigger the payoff.</p>
           </div>
         </div>
+        <ol class="steps">
+          <li>
+            <span class="step-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 8l-4 4 4 4M17 8l4 4-4 4M3 12h18"/></svg></span>
+            <div><h3>Swipe left or right</h3><p>Steer the falling blocks into place.</p></div>
+          </li>
+          <li>
+            <span class="step-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M6 15l6 6 6-6"/></svg></span>
+            <div><h3>Swipe down</h3><p>Speed up the drop when you know where it goes.</p></div>
+          </li>
+          <li>
+            <span class="step-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.34-5.66M20 4v5h-5"/></svg></span>
+            <div><h3>Double tap</h3><p>Rotate the pair to lay blocks side by side.</p></div>
+          </li>
+        </ol>
       </div>
     </section>
 
-    <!-- 3. news grid -->
-    <section id="news" class="news">
-      <div class="wrap">
-        <h2 class="block-title">BITFIGHT NEWS</h2>
-        <div class="news-grid">
-          <a class="news-card" href="https://discord.gg/yCgdm2uQ" target="_blank" rel="noopener noreferrer">
-            <span class="news-media tile-pink" aria-hidden="true"><span class="tile-glyph">◆</span></span>
-            <span class="pill">COMMUNITY</span>
-            <span class="news-title">Find your next rival on Discord</span>
-          </a>
-          <a class="news-card" href="https://www.reddit.com/r/bitfight/" target="_blank" rel="noopener noreferrer">
-            <span class="news-media tile-blue" aria-hidden="true"><span class="tile-glyph">✚</span></span>
-            <span class="pill">STRATEGY</span>
-            <span class="news-title">Four colors. Endless combinations.</span>
-          </a>
-          <a class="news-card" href="https://apps.apple.com/tr/app/bitfight/id6449154006" target="_blank" rel="noopener noreferrer">
-            <span class="news-media tile-lime" aria-hidden="true"><span class="tile-glyph">↗</span></span>
-            <span class="pill">PLAY NOW</span>
-            <span class="news-title">The arena is waiting for you.</span>
-          </a>
+    <!-- community -->
+    <section id="community" class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Community</p>
+          <h2>Find your next rival.</h2>
+          <p class="section-lead">Share strategies, report bugs and help shape what comes next for Bitfight.</p>
         </div>
-        <a class="btn-pill" href="https://www.reddit.com/r/bitfight/" target="_blank" rel="noopener noreferrer">ALL BITFIGHT NEWS</a>
-      </div>
-    </section>
-
-    <!-- 4. dark band: see the latest -->
-    <section id="latest" class="band">
-      <div class="band-inner">
-        <div class="band-text">
-          <h2>SEE THE LATEST</h2>
-          <p>To stay on top of your game, keep an eye on the in-game news. Follow us on social for the latest chatter and sneak peeks at what the team is working on. Don't be a stranger and join the conversation.</p>
-          <p class="follow-label">FOLLOW BITFIGHT ON</p>
-          <div class="social-row">
-            <a href="https://discord.gg/yCgdm2uQ" target="_blank" rel="noopener noreferrer" aria-label="Discord">D</a>
-            <a href="https://www.reddit.com/r/bitfight/" target="_blank" rel="noopener noreferrer" aria-label="Reddit">R</a>
-            <a href="https://app.gitter.im/#/room/#bitfight:gitter.im" target="_blank" rel="noopener noreferrer" aria-label="Chat">C</a>
-          </div>
-        </div>
-        <div class="band-pic bleed-right"><img src="assets/bf.png" alt="Bitfight match in progress"></div>
-      </div>
-    </section>
-
-    <!-- 5. modes row -->
-    <section id="modes" class="modes">
-      <div class="wrap">
-        <h2 class="block-title">EVERY MOVE HITS BACK</h2>
-        <div class="mode-grid">
-          <article><span class="mode-icon red">◆</span><h3>Chain reaction</h3><p>Match the right blocks and watch the board break open in your favor.</p></article>
-          <article><span class="mode-icon green">✚</span><h3>Power moves</h3><p>Every color has a job. Heal, attack, defend or scramble the field.</p></article>
-          <article><span class="mode-icon blue">↗</span><h3>Think faster</h3><p>The grid never waits. Read the next drop and make your moment count.</p></article>
+        <div class="community-grid">
+          <a class="community-card discord" href="https://discord.gg/yCgdm2uQ" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+            <h3>Discord</h3>
+            <p>Chat live with players and the dev.</p>
+            <span class="card-link">Join the server →</span>
+          </a>
+          <a class="community-card reddit" href="https://www.reddit.com/r/bitfight/" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/></svg>
+            <h3>Reddit</h3>
+            <p>Tips, clips and updates at r/bitfight.</p>
+            <span class="card-link">Visit the subreddit →</span>
+          </a>
+          <a class="community-card chat" href="https://app.gitter.im/#/room/#bitfight:gitter.im" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true" class="stroke"><path d="M21 12a8 8 0 0 1-11.6 7.14L4 20.5l1.36-4.6A8 8 0 1 1 21 12z"/><path d="M8.5 12h.01M12 12h.01M15.5 12h.01"/></svg>
+            <h3>Open chat</h3>
+            <p>Talk tech and ideas on Gitter.</p>
+            <span class="card-link">Open the room →</span>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- 6. cta band -->
+    <!-- final cta -->
     <section class="cta">
-      <div class="cta-inner">
-        <h2>Want to help shape Bitfight?</h2>
-        <a class="btn-solid" href="https://discord.gg/yCgdm2uQ" target="_blank" rel="noopener noreferrer">JOIN THE FIGHT</a>
+      <div class="container">
+        <div class="cta-card">
+          <img class="cta-icon" src="assets/favicon_io/android-chrome-192x192.png" alt="" width="96" height="96">
+          <div class="cta-copy">
+            <h2>The arena is waiting.</h2>
+            <p>Download Bitfight for free and drop in, fighter.</p>
+          </div>
+          <a class="app-store app-store-dark" href="https://apps.apple.com/tr/app/bitfight/id6449154006" target="_blank" rel="noopener noreferrer" aria-label="Download on the App Store">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>
+            <span><small>Download on the</small>App Store</span>
+          </a>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="footer-inner">
-      <div class="footer-row">
-        <div class="footer-social">
-          <span>Follow us on</span>
-          <a href="https://discord.gg/yCgdm2uQ" target="_blank" rel="noopener noreferrer">Discord</a>
-          <a href="https://www.reddit.com/r/bitfight/" target="_blank" rel="noopener noreferrer">Reddit</a>
-          <a href="https://app.gitter.im/#/room/#bitfight:gitter.im" target="_blank" rel="noopener noreferrer">Chat</a>
-        </div>
-        <a class="store-badge dark" href="https://apps.apple.com/tr/app/bitfight/id6449154006" target="_blank" rel="noopener noreferrer">
-          <span class="apple">&#63743;</span><span><small>Download on the</small>App Store</span>
-        </a>
-      </div>
-      <nav class="footer-links" aria-label="Legal">
-        <a href="privacy.html">Privacy Policy</a>
+    <div class="container footer-inner">
+      <a class="brand" href="#top"><img class="brand-mark" src="assets/favicon_io/apple-touch-icon.png" alt="" width="34" height="34"><span>BITFIGHT</span></a>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="https://discord.gg/yCgdm2uQ" target="_blank" rel="noopener noreferrer">Discord</a>
+        <a href="https://www.reddit.com/r/bitfight/" target="_blank" rel="noopener noreferrer">Reddit</a>
+        <a href="https://app.gitter.im/#/room/#bitfight:gitter.im" target="_blank" rel="noopener noreferrer">Chat</a>
+        <a href="privacy.html">Privacy</a>
         <a href="mailto:yasinaktimur@gmail.com">Contact</a>
       </nav>
-      <div class="footer-end">
-        <span>© 2026 Bitfight. Built for the next move.</span>
-        <a class="brand footer-brand" href="#top"><span class="brand-mark">B</span><span>BITFIGHT</span></a>
-      </div>
+      <p class="copyright">© 2026 Bitfight. All rights reserved.</p>
     </div>
   </footer>
 
-  <script>const toggle=document.querySelector('.menu-toggle');const nav=document.querySelector('.site-nav');toggle.addEventListener('click',()=>{const open=toggle.getAttribute('aria-expanded')==='true';toggle.setAttribute('aria-expanded',String(!open));nav.classList.toggle('is-open',!open)});</script>
+  <script>
+    const toggle=document.querySelector('.menu-toggle');const nav=document.querySelector('.site-nav');
+    toggle.addEventListener('click',()=>{const open=toggle.getAttribute('aria-expanded')==='true';toggle.setAttribute('aria-expanded',String(!open));nav.classList.toggle('is-open',!open)});
+    nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{toggle.setAttribute('aria-expanded','false');nav.classList.remove('is-open')}));
+    const header=document.querySelector('.site-header');
+    const onScroll=()=>header.classList.toggle('is-scrolled',window.scrollY>10);onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+  </script>
 </body>
 </html>
